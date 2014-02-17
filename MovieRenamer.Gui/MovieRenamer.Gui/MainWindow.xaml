@@ -1,0 +1,34 @@
+﻿<Window x:Class="MovieRenamer.Gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gui="clr-namespace:MovieRenamer.Gui"
+        Title="MainWindow" Height="550" Width="925">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="350" MinHeight="300" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="60"  />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Click="BtnSelectDestination_OnClick" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Zielverzeichnis auswählen" Margin="5,5,5,0" />
+        <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding Path=DestinationFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 IsEnabled="False" MinWidth="300" Width="Auto" />
+        <Button Grid.Row="1" Click="BtnSelect_OnClick" Content="Dateien auswählen" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,5,0" />
+
+        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Name="DgMediaFiles" AutoGeneratingColumn="OnAutoGeneratingColumn" gui:DataGridCellHelper.IsSingleClickInCell="True" />
+
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Command="Save" Content="Dateien umbennen">
+            <Button.CommandBindings>
+                <CommandBinding Command="Save" Executed="Do_Executed" CanExecute="Do_CanExecute" />
+            </Button.CommandBindings>
+        </Button>
+
+        <ListBox ItemsSource="{Binding History}" Grid.Row="4" Grid.ColumnSpan="2" gui:ListBoxBehavior.ScrollOnNewItem="True" Height="50" Margin="5,5,5,0"/>
+    </Grid>
+</Window>

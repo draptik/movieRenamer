@@ -10,49 +10,11 @@ TestResults
 *.sln.docstates
 
 
-# Visual C++ cache files
-ipch/
-*.aps
-*.ncb
-*.opensdf
-*.sdf
-
-# Visual Studio profiler
-*.psess
-*.vsp
-
-# Guidance Automation Toolkit
-*.gpState
-
 # ReSharper is a .NET coding add-in
 _ReSharper*
 
-# NCrunch
-*.ncrunch*
-.*crunch*.local.xml
-
-# Installshield output folder 
-[Ee]xpress
-
-# DocProject is a documentation generator add-in
-DocProject/buildhelp/
-DocProject/Help/*.HxT
-DocProject/Help/*.HxC
-DocProject/Help/*.hhc
-DocProject/Help/*.hhk
-DocProject/Help/*.hhp
-DocProject/Help/Html2
-DocProject/Help/html
-
-# Click-Once directory
-publish
-
-# Publish Web Output
-*.Publish.xml
 
 # Others
-[Bb]in
-[Oo]bj
 sql
 TestResults
 [Tt]est[Rr]esult*
@@ -68,3 +30,8 @@ Generated_Code #added for RIA/Silverlight projects
 _UpgradeReport_Files/
 Backup*/
 UpgradeLog*.XML
+
+
+
+MovieRenamer.Gui/MovieRenamer.Gui/bin/Debug
+MovieRenamer.Gui/MovieRenamer.Gui/obj
