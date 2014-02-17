@@ -14,5 +14,5 @@ Kurzanleitung:
 - Zip-Datei entpacken
 - `MovieRenamer.Gui.exe` Doppelklicken
  
-Falls der letzte Schritt nicht klappt, weil das Microsoft .NET Framework 4.5.1 fehlt: Einfach auf den Link klicken und das Framework installieren.
+Falls der letzte Schritt nicht klappt, weil das Microsoft .NET Framework 4.5.1 fehlt: Einfach auf den Link in der Fehlermeldung klicken und das Framework installieren.
 
